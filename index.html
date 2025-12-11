@@ -1100,6 +1100,22 @@
                 margin-top: 25px;
                 font-size: 0.95em;
             }
+
+            /* Стили для рамочки с тематиками */
+            .section div[style*="linear-gradient"] {
+                padding: 25px 20px !important;
+                margin-top: 30px !important;
+            }
+
+            .section div[style*="linear-gradient"] h3 {
+                font-size: 1.2em !important;
+                margin-bottom: 20px !important;
+            }
+
+            .section div[style*="linear-gradient"] p {
+                font-size: 0.95em !important;
+                line-height: 1.7 !important;
+            }
         }
     </style>
 </head>
@@ -1289,8 +1305,84 @@
             </div>
         </div>
 
-        <!-- Блок 6: Что делает блогер / Что делаем мы -->
+        <!-- Блок 6: Цифры доходности — РЕАЛЬНЫЕ ПРИМЕРЫ -->
         <div class="section dark">
+            <h2>Реальные цифры прибыли Telegram-каналов</h2>
+            <table class="revenue-table">
+                <thead>
+                    <tr>
+                        <th>Канал</th>
+                        <th>Доход/месяц</th>
+                        <th>Ссылка</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>IT и выйти</td>
+                        <td>~10 млн ₽</td>
+                        <td><a href="https://t.me/techmedia" target="_blank">t.me/techmedia</a></td>
+                    </tr>
+                    <tr>
+                        <td>Трендач</td>
+                        <td>~4,5 млн ₽</td>
+                        <td><a href="https://t.me/trendach" target="_blank">t.me/trendach</a></td>
+                    </tr>
+                    <tr>
+                        <td>Сегодня в тренде</td>
+                        <td>~10 млн ₽</td>
+                        <td><a href="https://t.me/trends" target="_blank">t.me/trends</a></td>
+                    </tr>
+                    <tr>
+                        <td>Че по трендам</td>
+                        <td>~7 млн ₽</td>
+                        <td><a href="https://t.me/trendswhat" target="_blank">t.me/trendswhat</a></td>
+                    </tr>
+                    <tr>
+                        <td>Ты в тренде или уходи</td>
+                        <td>~5 млн ₽</td>
+                        <td><a href="https://t.me/trendsetter" target="_blank">t.me/trendsetter</a></td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td><strong>НАШ ПРОЕКТ</strong> (прогноз)</td>
+                        <td><strong>~6 млн ₽</strong></td>
+                        <td><strong>Читаемость 10-15%</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="background: linear-gradient(135deg, rgba(51, 144, 236, 0.15) 0%, rgba(16, 185, 129, 0.15) 100%); border: 2px solid rgba(51, 144, 236, 0.4); padding: 35px; border-radius: 8px; margin-top: 50px;">
+                <h3 style="color: #3390ec; margin-bottom: 25px; font-size: 1.4em; font-weight: 600; text-align: center;">О выборе тематики</h3>
+                <p style="font-size: 1.05em; color: #e0e0e0; line-height: 1.8; margin: 0; text-align: left;">
+                    Мы можем выбрать любую тематику для нашего совместного канала. <strong style="color: #3390ec;">IT</strong>-тематика — высокооплачиваемая, реклама там стоит хорошо, но аудитория узкая и требовательная. <strong style="color: #a855f7;">Маркетинг</strong> — самая высокооплачиваемая тематика на данный момент. Моё предложение для старта — взять тематику <strong style="color: #10b981;">Тренды</strong>. Это что-то на стыке <strong style="color: #3390ec;">IT</strong> и <strong style="color: #a855f7;">Маркетинга</strong>, динамично развивающаяся и экономически выгодная ниша. Но это обсуждаемо — мы можем выбрать любое направление, которое вам интересно.
+                </p>
+            </div>
+
+            <div class="payback-chart">
+                <h3>Окупаемость инвестиций</h3>
+                <p style="font-size: 1.1em; color: #b0b0b0; margin-bottom: 30px;">Ваша инвестиция возвращается уже через 1-2 месяца</p>
+                <div class="payback-stats">
+                    <div class="stat-item">
+                        <div class="stat-label">Инвестиция</div>
+                        <div class="stat-value">3,15 млн ₽</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Ваша доля (50%)</div>
+                        <div class="stat-value">3 млн ₽/мес</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Окупаемость</div>
+                        <div class="stat-value">1-2 мес</div>
+                    </div>
+                    <div class="stat-item highlight">
+                        <div class="stat-label">Далее</div>
+                        <div class="stat-value">Чистая прибыль</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Блок 7: Что делает блогер / Что делаем мы -->
+        <div class="section">
             <h2>Кто что делает</h2>
             <div class="roles-grid">
                 <div class="role-card blogger">
@@ -1320,70 +1412,6 @@
                 <h4>Итого инвестиции в трафик</h4>
                 <div class="amount">6,3 млн ₽</div>
                 <p style="font-size: 1.2em; margin-top: 15px; opacity: 0.9;">По 3,15 млн ₽ каждый (50/50)</p>
-            </div>
-        </div>
-
-        <!-- Блок 7: Цифры доходности — РЕАЛЬНЫЕ ПРИМЕРЫ -->
-        <div class="section">
-            <h2>Реальные цифры прибыли Telegram-каналов</h2>
-            <table class="revenue-table">
-                <thead>
-                    <tr>
-                        <th>Канал</th>
-                        <th>Доход/месяц</th>
-                        <th>Ссылка</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Трендач</td>
-                        <td>~4,5 млн ₽</td>
-                        <td><a href="https://t.me/trendach" target="_blank">t.me/trendach</a></td>
-                    </tr>
-                    <tr>
-                        <td>Сегодня в тренде</td>
-                        <td>~10 млн ₽</td>
-                        <td><a href="https://t.me/trends" target="_blank">t.me/trends</a></td>
-                    </tr>
-                    <tr>
-                        <td>Че по трендам</td>
-                        <td>~7 млн ₽</td>
-                        <td><a href="https://t.me/trendswhat" target="_blank">t.me/trendswhat</a></td>
-                    </tr>
-                    <tr>
-                        <td>Ты в тренде или уходи</td>
-                        <td>~5 млн ₽</td>
-                        <td><a href="https://t.me/trendsetter" target="_blank">t.me/trendsetter</a></td>
-                    </tr>
-                    <tr class="highlight-row">
-                        <td><strong>НАШ ПРОЕКТ</strong> (прогноз)</td>
-                        <td><strong>~6 млн ₽</strong></td>
-                        <td><strong>Читаемость 10-15%</strong></td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="payback-chart">
-                <h3>Окупаемость инвестиций</h3>
-                <p style="font-size: 1.1em; color: #b0b0b0; margin-bottom: 30px;">Ваша инвестиция возвращается уже через 1-2 месяца</p>
-                <div class="payback-stats">
-                    <div class="stat-item">
-                        <div class="stat-label">Инвестиция</div>
-                        <div class="stat-value">3,15 млн ₽</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-label">Ваша доля (50%)</div>
-                        <div class="stat-value">3 млн ₽/мес</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-label">Окупаемость</div>
-                        <div class="stat-value">1-2 мес</div>
-                    </div>
-                    <div class="stat-item highlight">
-                        <div class="stat-label">Далее</div>
-                        <div class="stat-value">Чистая прибыль</div>
-                    </div>
-                </div>
             </div>
         </div>
 
