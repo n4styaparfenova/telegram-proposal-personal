@@ -170,6 +170,130 @@
             font-weight: 300;
         }
 
+        .variant-container {
+            margin-top: 50px;
+        }
+
+        .variant-box {
+            background: #1a1a1a;
+            padding: 50px;
+            border-radius: 8px;
+            margin-bottom: 50px;
+            border: 2px solid #222;
+        }
+
+        .variant-box.optimal {
+            border-color: #10b981;
+        }
+
+        .variant-box.organic {
+            border-color: #a855f7;
+        }
+
+        .variant-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .variant-header h3 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .variant-box.optimal .variant-header h3 {
+            color: #10b981;
+        }
+
+        .variant-box.organic .variant-header h3 {
+            color: #a855f7;
+        }
+
+        .variant-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .variant-box.optimal .variant-badge {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+        }
+
+        .variant-box.organic .variant-badge {
+            background: rgba(168, 85, 247, 0.2);
+            color: #a855f7;
+        }
+
+        .variant-steps {
+            margin: 40px 0;
+        }
+
+        .variant-step {
+            background: #0a0a0a;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border: 1px solid #333;
+        }
+
+        .variant-step h4 {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .variant-box.optimal .variant-step h4 {
+            color: #10b981;
+        }
+
+        .variant-box.organic .variant-step h4 {
+            color: #a855f7;
+        }
+
+        .variant-step ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .variant-step li {
+            margin: 10px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #b0b0b0;
+        }
+
+        .variant-step li:before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #3390ec;
+            font-weight: bold;
+        }
+
+        .variant-minuses {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .variant-minuses h4 {
+            color: #ef4444;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .variant-minuses p {
+            color: #b0b0b0;
+        }
+
         .result-box {
             background: linear-gradient(135deg, #3390ec 0%, #229ED9 100%);
             color: white;
@@ -515,8 +639,41 @@
             color: #10b981;
         }
 
+        .conclusion-section {
+            margin-top: 50px;
+            background: rgba(51, 144, 236, 0.1);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(51, 144, 236, 0.3);
+        }
+
+        .conclusion-section h3 {
+            color: #3390ec;
+        }
+
         .why-us-content ul {
             list-style: none;
+        }
+
+        .why-us-content ol {
+            list-style: decimal;
+            margin-left: 25px;
+            color: #b0b0b0;
+        }
+
+        .why-us-content ol li {
+            margin: 25px 0;
+            padding-left: 10px;
+        }
+
+        .why-us-content ol li strong {
+            color: #fff;
+            font-size: 1.1em;
+        }
+
+        .why-us-content ol li ul {
+            margin-top: 15px;
+            margin-left: 0;
         }
 
         .why-us-content li {
@@ -535,11 +692,17 @@
         }
 
         .solution-section li:before {
-            content: "—";
+            content: "✓";
             position: absolute;
             left: 0;
             color: #10b981;
             font-weight: bold;
+        }
+
+        .conclusion-section p {
+            color: #e0e0e0;
+            font-size: 1.1em;
+            line-height: 1.7;
         }
 
         .cta-section {
@@ -696,66 +859,217 @@
             <h1>Давайте создадим миллионный Telegram-канал вместе</h1>
             <p class="subtitle">Помогу превратить вашу аудиторию в прибыльный бизнес-актив</p>
             <div class="highlight">
-                Моя идея — объединить вашу аудиторию и мою экспертизу<br>
-                в создании и монетизации Telegram-каналов,<br>
-                нацеленных на корпоративных клиентов (Яндекс, ВТБ, Сбербанк и др.)
+                <h3 style="font-size: 1.4em; margin-bottom: 25px; color: #3390ec; font-weight: 600;">О нас:</h3>
+                <ul style="list-style: none; text-align: left; max-width: 650px; margin: 0 auto 30px;">
+                    <li style="margin: 12px 0; padding-left: 25px; position: relative;">
+                        <span style="position: absolute; left: 0; color: #3390ec; font-weight: bold;">—</span>
+                        Сеть Telegram-каналов, входящая в топ-5 сетей по России
+                    </li>
+                    <li style="margin: 12px 0; padding-left: 25px; position: relative;">
+                        <span style="position: absolute; left: 0; color: #3390ec; font-weight: bold;">—</span>
+                        Ежемесячный оборот: 20 миллионов рублей
+                    </li>
+                    <li style="margin: 12px 0; padding-left: 25px; position: relative;">
+                        <span style="position: absolute; left: 0; color: #3390ec; font-weight: bold;">—</span>
+                        Собственная база постоянных клиентов и рекламодателей
+                    </li>
+                    <li style="margin: 12px 0; padding-left: 25px; position: relative;">
+                        <span style="position: absolute; left: 0; color: #3390ec; font-weight: bold;">—</span>
+                        Своя команда по ведению каналов и поддержанию активности аудитории
+                    </li>
+                    <li style="margin: 12px 0; padding-left: 25px; position: relative;">
+                        <span style="position: absolute; left: 0; color: #3390ec; font-weight: bold;">—</span>
+                        Более 7 лет опыта в создании и монетизации Telegram-каналов
+                    </li>
+                </ul>
+
+                <h3 style="font-size: 1.4em; margin: 30px 0 15px; color: #10b981; font-weight: 600;">Суть предложения:</h3>
+                <p style="margin-bottom: 25px;">Создать совместный Telegram-канал с потенциальной монетизацией <strong style="color: #10b981;">от 5 миллионов рублей в месяц</strong> — это пассивный доход и отдельный бизнес-актив.</p>
+
+                <h3 style="font-size: 1.4em; margin: 30px 0 15px; color: #a855f7; font-weight: 600;">Что получает блогер:</h3>
+                <p style="margin-bottom: 0;">Мы берём вашу аудиторию + наша экспертиза и инфраструктура = прибыльный канал с минимальным участием с вашей стороны.</p>
             </div>
         </div>
 
-        <!-- Блок 2: Почему я знаю как это сделать -->
+        <!-- Блок 2: Почему это выгодно вам -->
         <div class="section dark">
-            <h2>Почему я знаю, как это сделать</h2>
-            <div class="expertise-grid">
-                <div class="expertise-item">
-                    <h3>Большой опыт в создании и развитии Telegram-каналов</h3>
+            <h2>Почему это выгодно вам</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h4>Пассивный доход</h4>
+                    <p>Вы привлекаете свою аудиторию — всё остальное делаем мы</p>
                 </div>
-                <div class="expertise-item">
-                    <h3>Своя сеть миллионных каналов</h3>
+                <div class="benefit-item">
+                    <h4>Новый актив</h4>
+                    <p>Отдельный бизнес, который можно продать</p>
                 </div>
-                <div class="expertise-item">
-                    <h3>Я являюсь одним из крупных игроков на рынке</h3>
+                <div class="benefit-item">
+                    <h4>Масштабируемость</h4>
+                    <p>Не привязан к вашему лицу</p>
                 </div>
-                <div class="expertise-item">
-                    <h3>Точно знаю, как развивать каналы и монетизировать контент</h3>
+                <div class="benefit-item">
+                    <h4>Стабильная монетизация</h4>
+                    <p>Работа с крупными брендами через нашу базу клиентов и сеть контактов</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>Готовые клиенты</h4>
+                    <p>Доступ к нашей базе и сети каналов</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>Быстрая окупаемость</h4>
+                    <p>Инвестиции возвращаются от 3 месяцев</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>Наша экспертиза</h4>
+                    <p>Работаем с миллионниками, знаем рынок</p>
                 </div>
             </div>
         </div>
 
-        <!-- Блок 3: Суть предложения (РАБОЧАЯ СХЕМА) -->
+        <!-- Блок 3: Почему я ищу партнёра -->
         <div class="section">
-            <h2>Как это работает</h2>
-            <div class="flow-diagram">
-                <div class="flow-steps">
-                    <div class="flow-step">
-                        <h3>ВАШ КАНАЛ<br>(с лицом)</h3>
-                        <p>Ваша живая читающая аудитория<br>Читаемость ~20%</p>
-                    </div>
-                    <div class="arrow">→</div>
-                    <div class="flow-step">
-                        <h3>НОВЫЙ СОВМЕСТНЫЙ КАНАЛ<br>(без лица)</h3>
-                        <p>Вы переливаете свою живую аудиторию<br>200-300K подписчиков</p>
-                    </div>
-                    <div class="arrow">+</div>
-                    <div class="flow-step">
-                        <h3>МОЙ ТРАФИК</h3>
-                        <p>Я добавляю 700K подписчиков<br>Мотивированный трафик<br>9₽/подписчик</p>
-                    </div>
+            <h2>Почему я ищу партнёра</h2>
+            <div class="why-us-content">
+                <div class="problem-section">
+                    <h3>Проблемы современного рынка Telegram</h3>
+                    <ol>
+                        <li>
+                            <strong>Резкий рост стоимости привлечения</strong>
+                            <ul>
+                                <li>Год назад: 10₽ за подписчика</li>
+                                <li>Сейчас: 150₽ за подписчика (рост в 15 раз!)</li>
+                                <li>Создать канал с 500K-1M подписчиков = огромные затраты</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Баннерная слепота аудитории</strong>
+                            <ul>
+                                <li>Люди реагируют на рекламу продуктов</li>
+                                <li>Но реклама самих Telegram-каналов уже не работает</li>
+                                <li>Привлечь органическую аудиторию с нуля = сложно и дорого</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Порог входа для монетизации</strong>
+                            <ul>
+                                <li>Для нормальной окупаемости рекламы нужно минимум 500K-1M подписчиков</li>
+                                <li>Меньшие цифры просто не окупаются</li>
+                            </ul>
+                        </li>
+                    </ol>
                 </div>
 
-                <div class="result-box">
-                    <h3>= МИЛЛИОННЫЙ КАНАЛ</h3>
+                <div class="solution-section">
+                    <h3>Наше решение</h3>
                     <ul>
-                        <li>1M подписчиков</li>
-                        <li>Читаемость 10-15% (топовый показатель)</li>
-                        <li>Заточен под крупные бренды</li>
-                        <li>Готовый бизнес-актив для монетизации</li>
+                        <li>У меня есть инструменты для привлечения подписчиков по 9₽ (вместо 150₽!)</li>
+                        <li>Это мотивированные подписчики с более низкой читаемостью</li>
+                        <li>НО: когда мы смешиваем их с вашей органической аудиторией (20% читаемости) → получается отличная итоговая читаемость для монетизации</li>
+                        <li>Канал масштабируется за счёт недорогого трафика</li>
+                        <li>У меня уже готовая база клиентов для монетизации</li>
+                        <li>Готовые процессы ведения и продаж</li>
                     </ul>
                 </div>
+
+                <div class="conclusion-section">
+                    <h3>Итог</h3>
+                    <p>Самостоятельно создать такой канал = очень дорого и долго.<br>
+                    <strong>Вместе мы можем сделать это быстро, дёшево и эффективно.</strong></p>
+                </div>
             </div>
         </div>
 
-        <!-- Блок 4: Почему БЕЗ ЛИЦА = больше денег -->
+        <!-- Блок 4: Как это работает -->
         <div class="section dark">
+            <h2>Как это работает</h2>
+
+            <div class="variant-container">
+                <!-- ВАРИАНТ 1: Смешанная аудитория -->
+                <div class="variant-box optimal">
+                    <div class="variant-header">
+                        <div class="variant-badge">Рекомендуемый вариант</div>
+                        <h3>ВАРИАНТ 1: Смешанная аудитория</h3>
+                    </div>
+
+                    <div class="variant-steps">
+                        <div class="variant-step">
+                            <h4>ШАГ 1: Вы привлекаете часть аудитории (до 200-500K)</h4>
+                            <ul>
+                                <li>Либо переименовываете свой существующий канал и меняете формат на "без лица"</li>
+                                <li>Либо создаём новый совместный канал, куда вы переводите аудиторию со своего основного аккаунта</li>
+                            </ul>
+                        </div>
+
+                        <div style="text-align: center; font-size: 2em; color: #10b981; margin: 20px 0;">+</div>
+
+                        <div class="variant-step">
+                            <h4>ШАГ 2: Мы добавляем мотивированный трафик (500-700K подписчиков по 9₽)</h4>
+                        </div>
+                    </div>
+
+                    <div class="result-box">
+                        <h3>= РЕЗУЛЬТАТ</h3>
+                        <ul>
+                            <li>1 миллион подписчиков</li>
+                            <li>Читаемость вашей аудитории: ~20%</li>
+                            <li>Итоговая читаемость после смешивания: 10-15% (отличный показатель для монетизации)</li>
+                            <li>Заточен под крупные бренды</li>
+                            <li>Готовый бизнес-актив</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ВАРИАНТ 2: Органическая аудитория -->
+                <div class="variant-box organic">
+                    <div class="variant-header">
+                        <div class="variant-badge">Альтернативный вариант</div>
+                        <h3>ВАРИАНТ 2: Полностью органическая аудитория</h3>
+                    </div>
+
+                    <div class="variant-steps">
+                        <div class="variant-step">
+                            <h4>ШАГ 1: Вы самостоятельно набираете всю органическую аудиторию</h4>
+                            <ul>
+                                <li>Либо переименовываем ваш существующий канал (меняем формат на "без лица")</li>
+                                <li>Либо переводим всю вашу аудиторию на новый совместный канал</li>
+                            </ul>
+                        </div>
+
+                        <div style="text-align: center; font-size: 2em; color: #a855f7; margin: 20px 0;">+</div>
+
+                        <div class="variant-step">
+                            <h4>ШАГ 2: Мы помогаем в дальнейшей раскрутке и монетизации безличного канала</h4>
+                        </div>
+                    </div>
+
+                    <div class="result-box" style="background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);">
+                        <h3>= РЕЗУЛЬТАТ</h3>
+                        <ul>
+                            <li>Канал полностью на вашей органической аудитории</li>
+                            <li>Высокая читаемость</li>
+                            <li>Мы берём на себя всю монетизацию и продажи</li>
+                        </ul>
+                    </div>
+
+                    <div class="variant-minuses">
+                        <h4>Минусы</h4>
+                        <p>Такую аудиторию очень трудно набрать</p>
+                    </div>
+                </div>
+
+                <div style="background: rgba(51, 144, 236, 0.1); border: 1px solid rgba(51, 144, 236, 0.3); padding: 30px; border-radius: 8px; margin-top: 30px; text-align: center;">
+                    <h3 style="color: #3390ec; margin-bottom: 20px; font-size: 1.4em;">Важно</h3>
+                    <p style="font-size: 1.1em; color: #e0e0e0; line-height: 1.7;">
+                        <strong>Читаемость органической аудитории блогера:</strong> ~20%<br>
+                        <strong>После смешивания с мотивированным трафиком:</strong> 10-15%<br>
+                        <strong>Это всё равно отличная читаемость для успешной монетизации</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Блок 5: Почему БЕЗ ЛИЦА = больше денег -->
+        <div class="section">
             <h2>Почему канал БЕЗ ЛИЦА = больше денег</h2>
             <div class="comparison">
                 <div class="comparison-card problem">
@@ -782,8 +1096,8 @@
             </div>
         </div>
 
-        <!-- Блок 5: Что делает блогер / Что делаем мы -->
-        <div class="section">
+        <!-- Блок 6: Что делает блогер / Что делаем мы -->
+        <div class="section dark">
             <h2>Кто что делает</h2>
             <div class="roles-grid">
                 <div class="role-card blogger">
@@ -816,8 +1130,8 @@
             </div>
         </div>
 
-        <!-- Блок 6: Цифры доходности — РЕАЛЬНЫЕ ПРИМЕРЫ -->
-        <div class="section dark">
+        <!-- Блок 7: Цифры доходности — РЕАЛЬНЫЕ ПРИМЕРЫ -->
+        <div class="section">
             <h2>Реальные цифры прибыли Telegram-каналов</h2>
             <table class="revenue-table">
                 <thead>
@@ -880,67 +1194,7 @@
             </div>
         </div>
 
-        <!-- Блок 7: Почему это выгодно БЛОГЕРУ -->
-        <div class="section">
-            <h2>Почему это выгодно вам</h2>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <h4>Пассивный доход</h4>
-                    <p>Вы просто перелили аудиторию — всё остальное делаем мы</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>Новый актив</h4>
-                    <p>Отдельный бизнес, который можно продать</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>Масштабируемость</h4>
-                    <p>Не привязан к вашему лицу</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>Стабильная монетизация</h4>
-                    <p>Работа с крупными брендами</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>Готовые клиенты</h4>
-                    <p>Доступ к нашей базе и сети каналов</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>Быстрая окупаемость</h4>
-                    <p>Инвестиции возвращаются за 1-2 месяца</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>Наша экспертиза</h4>
-                    <p>Работаем с миллионниками, знаем рынок</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Блок 8: Почему это выгодно МНЕ -->
-        <div class="section dark">
-            <h2>Почему это выгодно мне</h2>
-            <div class="why-us-content">
-                <div class="problem-section">
-                    <h3>Проблема рынка</h3>
-                    <ul>
-                        <li>Качественная аудитория подорожала в десятки раз</li>
-                        <li>Море каналов с мёртвым трафиком</li>
-                        <li>Низкая эффективность рекламы на большинстве площадок</li>
-                    </ul>
-                </div>
-
-                <div class="solution-section">
-                    <h3>Моё решение</h3>
-                    <ul>
-                        <li>Ваша живая аудитория (20% читаемость) + мой массовый трафик</li>
-                        <li>Итоговая читаемость 10-15% = конкурентное преимущество</li>
-                        <li>Высокая активность = довольные клиенты = повторные продажи</li>
-                        <li>Уникальное предложение для моих рекламодателей</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Блок 9: Win-Win и следующие шаги -->
+        <!-- Блок 8: Win-Win и следующие шаги -->
         <div class="cta-section">
             <h2>Давайте создадим это вместе</h2>
             <div class="win-win">Win-Win на всех этапах</div>
