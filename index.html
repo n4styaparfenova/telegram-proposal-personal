@@ -705,6 +705,132 @@
             line-height: 1.7;
         }
 
+        .timeline-container {
+            margin: 50px 0;
+            position: relative;
+        }
+
+        .timeline-line {
+            position: absolute;
+            top: 80px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3390ec 0%, #10b981 100%);
+            z-index: 0;
+        }
+
+        .timeline-items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-item {
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 35px 25px;
+            border: 2px solid #222;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .timeline-item:hover {
+            transform: translateY(-5px);
+            border-color: #3390ec;
+        }
+
+        .timeline-item.month-1 {
+            border-top: 4px solid #3390ec;
+        }
+
+        .timeline-item.month-2 {
+            border-top: 4px solid #a855f7;
+        }
+
+        .timeline-item.month-3 {
+            border-top: 4px solid #10b981;
+        }
+
+        .timeline-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3390ec 0%, #229ED9 100%);
+            color: white;
+            font-size: 1.3em;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            position: relative;
+        }
+
+        .timeline-item.month-2 .timeline-number {
+            background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+        }
+
+        .timeline-item.month-3 .timeline-number {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+
+        .timeline-item h3 {
+            text-align: center;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .timeline-item h4 {
+            font-size: 1em;
+            margin-bottom: 8px;
+            color: #3390ec;
+            font-weight: 600;
+        }
+
+        .timeline-item ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .timeline-item li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+            color: #b0b0b0;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        .timeline-item li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .timeline-highlight {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .timeline-highlight p {
+            color: #10b981;
+            font-weight: 600;
+            font-size: 1.05em;
+            margin: 0;
+        }
+
         .cta-section {
             background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
             color: white;
@@ -1116,6 +1242,54 @@
                 font-size: 0.95em !important;
                 line-height: 1.7 !important;
             }
+
+            /* Стили для таймлайна */
+            .timeline-container {
+                margin: 30px 0;
+            }
+
+            .timeline-line {
+                display: none;
+            }
+
+            .timeline-items {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .timeline-item {
+                padding: 25px 20px;
+            }
+
+            .timeline-number {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1em;
+                margin-bottom: 15px;
+            }
+
+            .timeline-item h3 {
+                font-size: 1.2em;
+                margin-bottom: 15px;
+            }
+
+            .timeline-item h4 {
+                font-size: 0.95em;
+            }
+
+            .timeline-item li {
+                font-size: 0.9em;
+                margin: 8px 0;
+            }
+
+            .timeline-highlight {
+                padding: 15px;
+                margin-top: 12px;
+            }
+
+            .timeline-highlight p {
+                font-size: 0.95em;
+            }
         }
     </style>
 </head>
@@ -1358,6 +1532,53 @@
                 <p style="font-size: 1.05em; color: #e0e0e0; line-height: 1.8; margin: 15px 0 0 0; text-align: left;">
                     Наша аудитория более широкая и разнообразная, поэтому я предлагаю для старта тематику <strong style="color: #10b981;">Тренды</strong> — пересечение <strong style="color: #3390ec;">IT</strong> и <strong style="color: #a855f7;">Маркетинга</strong>, двух наиболее востребованных направлений. Это динамично развивающаяся и экономически выгодная ниша. Выбор тематики полностью обсуждаем.
                 </p>
+            </div>
+
+            <div class="timeline-container">
+                <h3 style="text-align: center; font-size: 1.8em; margin-bottom: 40px; color: #fff; font-weight: 600;">Таймлайн проекта</h3>
+                <div class="timeline-line"></div>
+                <div class="timeline-items">
+                    <!-- Месяц 1 -->
+                    <div class="timeline-item month-1">
+                        <div class="timeline-number">1</div>
+                        <h3>Запуск проекта</h3>
+                        <ul>
+                            <li>Согласование деталей и выбор тематики</li>
+                            <li>Создание канала и брендинг</li>
+                            <li>Перелив вашей аудитории (200-500K)</li>
+                            <li>Закупка мотивированного трафика (500-700K)</li>
+                            <li>Достижение 1M подписчиков</li>
+                        </ul>
+                    </div>
+
+                    <!-- Месяц 2 -->
+                    <div class="timeline-item month-2">
+                        <div class="timeline-number">2</div>
+                        <h3>Развитие канала</h3>
+                        <ul>
+                            <li>Ежедневный постинг качественного контента</li>
+                            <li>Работа над вовлечённостью аудитории</li>
+                            <li>Первые рекламные интеграции</li>
+                            <li>Наращивание читаемости</li>
+                            <li>Выход на стабильную монетизацию</li>
+                        </ul>
+                    </div>
+
+                    <!-- Месяц 3-4 -->
+                    <div class="timeline-item month-3">
+                        <div class="timeline-number">3-4</div>
+                        <h3>Окупаемость</h3>
+                        <ul>
+                            <li>Стабильная монетизация ~6 млн ₽/мес</li>
+                            <li>Окупаемость инвестиций (3,15 млн ₽)</li>
+                            <li>Начало получения чистой прибыли</li>
+                            <li>Масштабирование и оптимизация</li>
+                        </ul>
+                        <div class="timeline-highlight">
+                            <p>✓ Полная окупаемость от 3 месяцев</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="payback-chart">
