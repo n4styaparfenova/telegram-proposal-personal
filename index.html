@@ -36,7 +36,6 @@
             text-align: center;
             padding: 120px 60px;
             position: relative;
-            overflow: hidden;
         }
 
         .hero::before {
@@ -47,25 +46,6 @@
             right: 0;
             height: 3px;
             background: linear-gradient(90deg, #3390ec, #229ED9);
-            z-index: 2;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image:
-                url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M60 15 L90 45 L75 45 L75 75 L45 75 L45 45 L30 45 Z' fill='%233390ec' opacity='0.03' transform='rotate(45 60 60)'/%3E%3C/svg%3E"),
-                url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 10 L60 30 L52 30 L52 50 L28 50 L28 30 L20 30 Z' fill='%23229ED9' opacity='0.04' transform='rotate(45 40 40)'/%3E%3C/svg%3E"),
-                url("data:image/svg+xml,%3Csvg width='150' height='150' viewBox='0 0 150 150' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M75 20 L110 55 L92 55 L92 95 L58 95 L58 55 L40 55 Z' fill='%233390ec' opacity='0.02' transform='rotate(45 75 75)'/%3E%3C/svg%3E");
-            background-position: 10% 20%, 85% 15%, 60% 70%, 20% 80%, 90% 85%;
-            background-repeat: no-repeat;
-            background-size: 120px, 80px, 150px, 100px, 90px;
-            z-index: 0;
-            pointer-events: none;
         }
 
         .hero h1 {
@@ -73,8 +53,6 @@
             margin-bottom: 30px;
             font-weight: 700;
             letter-spacing: -1px;
-            position: relative;
-            z-index: 1;
         }
 
         .hero .subtitle {
@@ -82,8 +60,6 @@
             margin-bottom: 20px;
             color: #b0b0b0;
             font-weight: 300;
-            position: relative;
-            z-index: 1;
         }
 
         .hero .highlight {
@@ -97,8 +73,6 @@
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            position: relative;
-            z-index: 1;
         }
 
         h2 {
