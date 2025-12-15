@@ -710,27 +710,12 @@
             position: relative;
         }
 
-        .timeline-line {
-            position: absolute;
-            top: 80px;
-            left: 0;
-            right: 40px;
-            height: 5px;
-            background: linear-gradient(90deg, #3390ec 0%, #10b981 100%);
-            z-index: 0;
+        .timeline-arrows-desktop {
+            display: block;
         }
 
-        .timeline-line::after {
-            content: '';
-            position: absolute;
-            right: -15px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 0;
-            height: 0;
-            border-left: 20px solid #10b981;
-            border-top: 12px solid transparent;
-            border-bottom: 12px solid transparent;
+        .timeline-arrows-mobile {
+            display: none;
         }
 
         .timeline-items {
@@ -1262,27 +1247,12 @@
                 position: relative;
             }
 
-            .timeline-line {
-                display: block;
-                top: 0;
-                left: auto;
-                right: 15px;
-                bottom: 60px;
-                width: 5px;
-                height: auto;
-                background: linear-gradient(180deg, #3390ec 0%, #10b981 100%);
+            .timeline-arrows-desktop {
+                display: none !important;
             }
 
-            .timeline-line::after {
-                right: auto;
-                left: 50%;
-                top: auto;
-                bottom: -15px;
-                transform: translateX(-50%);
-                border-left: 12px solid transparent;
-                border-right: 12px solid transparent;
-                border-top: 20px solid #10b981;
-                border-bottom: none;
+            .timeline-arrows-mobile {
+                display: block !important;
             }
 
             .timeline-items {
@@ -1705,7 +1675,39 @@
             <div class="timeline-container">
                 <h3 style="text-align: center; font-size: 1.8em; margin-bottom: 15px; color: #fff; font-weight: 600;">Таймлайн проекта</h3>
                 <p style="text-align: center; font-size: 1em; color: #b0b0b0; margin-bottom: 40px;">От запуска до окупаемости</p>
-                <div class="timeline-line"></div>
+
+                <!-- SVG стрелки-дуги для десктопа -->
+                <svg class="timeline-arrows timeline-arrows-desktop" viewBox="0 0 1000 200" style="position: absolute; top: 120px; left: 0; right: 0; width: 100%; height: 200px; z-index: 0; pointer-events: none;">
+                    <defs>
+                        <marker id="arrowhead1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#a855f7" />
+                        </marker>
+                        <marker id="arrowhead2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#10b981" />
+                        </marker>
+                    </defs>
+                    <!-- Дуга 1→2 -->
+                    <path d="M 230 20 Q 350 -30, 470 20" stroke="#a855f7" stroke-width="4" fill="none" marker-end="url(#arrowhead1)" />
+                    <!-- Дуга 2→3 -->
+                    <path d="M 560 20 Q 680 -30, 800 20" stroke="#10b981" stroke-width="4" fill="none" marker-end="url(#arrowhead2)" />
+                </svg>
+
+                <!-- SVG стрелки-дуги для мобильной версии -->
+                <svg class="timeline-arrows timeline-arrows-mobile" viewBox="0 0 100 600" style="position: absolute; top: 50px; right: 10px; width: 100px; height: calc(100% - 100px); z-index: 0; pointer-events: none; display: none;">
+                    <defs>
+                        <marker id="arrowhead1-mobile" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#a855f7" />
+                        </marker>
+                        <marker id="arrowhead2-mobile" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#10b981" />
+                        </marker>
+                    </defs>
+                    <!-- Вертикальная дуга 1→2 -->
+                    <path d="M 20 80 Q 60 150, 20 220" stroke="#a855f7" stroke-width="4" fill="none" marker-end="url(#arrowhead1-mobile)" />
+                    <!-- Вертикальная дуга 2→3 -->
+                    <path d="M 20 320 Q 60 390, 20 460" stroke="#10b981" stroke-width="4" fill="none" marker-end="url(#arrowhead2-mobile)" />
+                </svg>
+
                 <div class="timeline-items">
                     <!-- Месяц 1 -->
                     <div class="timeline-item month-1">
