@@ -714,10 +714,23 @@
             position: absolute;
             top: 80px;
             left: 0;
-            right: 0;
-            height: 4px;
+            right: 40px;
+            height: 5px;
             background: linear-gradient(90deg, #3390ec 0%, #10b981 100%);
             z-index: 0;
+        }
+
+        .timeline-line::after {
+            content: '';
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-left: 20px solid #10b981;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
         }
 
         .timeline-items {
@@ -1246,15 +1259,36 @@
             /* Стили для таймлайна */
             .timeline-container {
                 margin: 30px 0;
+                position: relative;
             }
 
             .timeline-line {
-                display: none;
+                display: block;
+                top: 0;
+                left: auto;
+                right: 15px;
+                bottom: 60px;
+                width: 5px;
+                height: auto;
+                background: linear-gradient(180deg, #3390ec 0%, #10b981 100%);
+            }
+
+            .timeline-line::after {
+                right: auto;
+                left: 50%;
+                top: auto;
+                bottom: -15px;
+                transform: translateX(-50%);
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+                border-top: 20px solid #10b981;
+                border-bottom: none;
             }
 
             .timeline-items {
                 grid-template-columns: 1fr;
                 gap: 25px;
+                padding-right: 35px;
             }
 
             .timeline-item {
@@ -1701,16 +1735,16 @@
                         </ul>
                     </div>
 
-                    <!-- Месяц 3-4 -->
+                    <!-- Месяц 3 -->
                     <div class="timeline-item month-3">
-                        <div class="timeline-number">3-4</div>
+                        <div class="timeline-number">3</div>
                         <h3>Окупаемость</h3>
                         <ul>
                             <li>Начало получения чистой прибыли</li>
                             <li>Масштабирование и оптимизация</li>
                         </ul>
                         <div class="timeline-highlight">
-                            <p>Ожидаемый срок окупаемости: от 3 месяцев</p>
+                            <p>Ожидаемый срок окупаемости: около 3 месяцев</p>
                         </div>
                     </div>
                 </div>
